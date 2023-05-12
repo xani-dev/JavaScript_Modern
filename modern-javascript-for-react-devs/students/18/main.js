@@ -90,12 +90,12 @@ const ex4 = () => {
 
 const ex5 = () => {
 	const countRepeats = (str) => {
-		let strArr = str.split(' ')
-		let testWord = 'this'
+		let strArr = str.split(' ');
+		let testWord = 'this';
 		let counter = 0;
 
-		strArr.forEach(element => {
-			if (element == testWord){
+		strArr.forEach((element) => {
+			if (element == testWord) {
 				counter++;
 			}
 		});
@@ -106,6 +106,27 @@ const ex5 = () => {
 	countRepeats('today this is a this is a this is a test.');
 };
 
+const ex6 = () => {
+	const longestString = (arr) => {
+		let element = arr[0];
+
+		for (let i = 0; i < arr.length; i++) {
+			if (arr[i].length > element.length) {
+				element = arr[i];
+			}
+		}
+		return element;
+	};
+
+	// iterate over array
+	//convert each elemento to string and count chars on each element
+	// compare num of chars of each , find longest
+	// return longest
+
+	//  Test Case
+	let array = ['this', 'is', 'a', 'test', 'happy'];
+	console.log(longestString(array));
+};
 // Call your exercise Functions here------------------------------------
 
 const main = async () => {
@@ -114,6 +135,7 @@ const main = async () => {
 	ex3();
 	ex4();
 	ex5();
+	ex6();
 };
 
 main();
